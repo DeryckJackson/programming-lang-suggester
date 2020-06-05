@@ -34,3 +34,14 @@ img {
 body {
   background-color: rgba(246, 246, 246, 0.712);
 }
+.bg-csharp {
+  background-color: #380090;
+}
+
+.bg-javascript {
+  background-color: #f0db4f;
+}
+
+.bg-python {
+  background-color: #3470a0;
+}

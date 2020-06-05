@@ -28,6 +28,7 @@ const surveyResult = (lst) => {
 $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
+
     let resultArray = [];
     resultArray.push($("input:radio[name=build]:checked").val());
     resultArray.push($("input:radio[name=color]:checked").val());
@@ -39,20 +40,25 @@ $(document).ready(function() {
     let result = surveyResult(resultArray);
 
     if (result === "javascript") {
+      $(".card-header").removeClass("bg-primary bg-indigo text-white").addClass("bg-javascript")
+      $(".btn").removeClass("bg-primary bg-indigo text-white").addClass("bg-javascript")
       $(".py.hide").hide();
       $(".csharp.hide").hide();
-      $(".js.hide").show();
+      $(".js.hide").slideDown();
     }
     else if (result === "python") {
+      $(".card-header").removeClass("bg-javascript bg-primary bg-indigo").addClass("bg-python text-white")
+      $(".btn").removeClass("bg-javascript bg-primary bg-indigo").addClass("bg-python text-white")
       $(".js.hide").hide();
       $(".csharp.hide").hide();
-      $(".py.hide").show();
+      $(".py.hide").slideDown();
     }
     else {
+      $(".card-header").removeClass("bg-javascript bg-primary bg-python").addClass("bg-csharp text-white")
+      $(".btn").removeClass("bg-javascript bg-primary bg-python").addClass("bg-csharp text-white")
       $(".js.hide").hide();
       $(".py.hide").hide();
-      $(".csharp.hide").show();
+      $(".csharp.hide").slideDown();
     }
-
   });
 });

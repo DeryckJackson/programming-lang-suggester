@@ -6,7 +6,7 @@
 
 ## Description
 
-A simple programming language questionaire to suggest which programming language to try out.
+A simple programming language questionaire website to suggest which programming language to learn. Takes the users inputs and outputs a programming language suggestion under the "Submit" button.
 
 ## Setup and Installation
 
