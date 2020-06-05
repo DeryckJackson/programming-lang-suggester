@@ -25,10 +25,12 @@ img {
   margin-bottom: 50px;
 }
 
-.hidden {
+.hide {
   display: none;
+  float: left;
+  align-items: center;
 }
 
 body {
-  background-color: lightgray;
+  background-color: rgba(246, 246, 246, 0.712);
 }

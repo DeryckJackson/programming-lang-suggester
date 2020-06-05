@@ -15,9 +15,11 @@ const surveyResult = (lst) => {
 
   if (js > py && js > csharp) {
     return "javascript";
-  } else if (py > js && py > csharp) {
+  }
+  else if (py > js && py > csharp) {
     return "python";
-  } else {
+  }
+  else {
     return "csharp";
   }
 }
@@ -36,6 +38,21 @@ $(document).ready(function() {
 
     let result = surveyResult(resultArray);
 
+    if (result === "javascript") {
+      $(".py.hide").hide();
+      $(".csharp.hide").hide();
+      $(".js.hide").show();
+    }
+    else if (result === "python") {
+      $(".js.hide").hide();
+      $(".csharp.hide").hide();
+      $(".py.hide").show();
+    }
+    else {
+      $(".js.hide").hide();
+      $(".py.hide").hide();
+      $(".csharp.hide").show();
+    }
 
   });
 });
