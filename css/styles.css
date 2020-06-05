@@ -25,6 +25,10 @@ img {
   margin-bottom: 50px;
 }
 
+.name-input {
+  padding: 10px 10px 0px 10px;
+}
+
 .hide {
   display: none;
   float: left;
@@ -34,6 +38,7 @@ img {
 body {
   background-color: rgba(246, 246, 246, 0.712);
 }
+
 .bg-csharp {
   background-color: #380090;
 }

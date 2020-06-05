@@ -15,7 +15,14 @@
       <h5>Welcome to the programming language questionaire.</h5>
       <h5 >Please answer the questions below to get a suggested programming language to learn:</h5>
     </div>
+    <!-- Survey questions section -->
     <form id="input">
+      <div class="card">
+        <label for="name" class="card-header bg-primary text-white">What's your name?</label>
+        <div class="form-group name-input">
+          <input id="name" class="form-control" type="text">
+        </div>
+      </div>
       <div class="row">
         <div class="col">
           <div class="card">
@@ -210,29 +217,30 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <!-- Output section, starts hidden -->
     <div class="output">
       <div class="js hide card bg-dark">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
         <div class="card-img-overlay">
-          <p class="card-text">You will probably like JavaScript.</p>
+          <p class="card-text"><span id="js-name-output"></span>, you will probably like JavaScript.</p>
         </div>
       </div>
       <div class="py hide card bg-dark text-white">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="">
         <div class="card-img-overlay">
-          <p class="card-text">You will probably like Python.</p>
+          <p class="card-text"><span id="py-name-output"></span>, you will probably like Python.</p>
         </div> 
       </div>
       <div class="csharp hide card bg-dark text-white">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/8/82/C_Sharp_logo.png" alt="">
         <div class="card-img-overlay">
-          <p class="card-text">You will probably like C#.</p>
+          <p class="card-text"><span id="csharp-name-output"></span>, you will probably like C#.</p>
         </div> 
       </div>
       <div class="java card hide">
         <img class="card-img" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="">
         <div class="card-img-overlay">
-          <p class="card-text">You will probably like Java.</p>
+          <p class="card-text"><span id="java-name-output"></span>, you will probably like Java.</p>
         </div> 
       </div>
     </div>

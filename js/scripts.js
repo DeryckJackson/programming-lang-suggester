@@ -1,3 +1,4 @@
+// Survey result logic
 const surveyResult = (lst) => {
   let js = 0;
   let py = 0;
@@ -30,7 +31,7 @@ const surveyResult = (lst) => {
   }
 }
 
-
+// Jquery show and hide result logic
 $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
@@ -43,11 +44,24 @@ $(document).ready(function() {
     resultArray.push($("input:radio[name=zombie]:checked").val());
     resultArray.push($("input:radio[name=naming]:checked").val());
 
+    const name = $("#name").val();
+
     let result = surveyResult(resultArray);
 
+    // Adds name and removes extras
+    $("#js-name-output").children("span").first().remove();
+    $("#py-name-output").children("span").first().remove();
+    $("#csharp-name-output").children("span").first().remove();
+    $("#java-name-output").children("span").first().remove();
+    $("#js-name-output").prepend(`<span>${name}</span>`);
+    $("#py-name-output").prepend(`<span>${name}</span>`);
+    $("#csharp-name-output").prepend(`<span>${name}</span>`);
+    $("#java-name-output").prepend(`<span>${name}</span>`);
+
+    //Shows and hides results based on result variable string
     if (result === "javascript") {
       $(".card-header").removeClass("bg-primary bg-indigo text-white bg-java").addClass("bg-javascript")
-      $(".btn").removeClass("bg-primary bg-indigo text-white bg-java").addClass("bg-javascript")
+      $(".btn").removeClass("bg-primary bg-indigo text-white bg-java").addClass("bg-javascript text-white")
       $(".py.hide").hide();
       $(".csharp.hide").hide();
       $(".java.hide").hide();
