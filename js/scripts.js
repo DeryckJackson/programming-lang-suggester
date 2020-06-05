@@ -13,14 +13,14 @@ const surveyResult = (lst) => {
     }
   }
 
-  if (js > py && js > csharp) {
-    return "javascript";
+  if (csharp > js && csharp > py) {
+    return "csharp";
   }
   else if (py > js && py > csharp) {
     return "python";
   }
   else {
-    return "csharp";
+    return "javascript";
   }
 }
 
