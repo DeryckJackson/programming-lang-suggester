@@ -1,3 +1,41 @@
+const surveyResult = (lst) => {
+  let js = 0;
+  let py = 0;
+  let csharp = 0;
+
+  for (i = 0; i < lst.length; i++) {
+    if (lst[i] === "javascript") {
+      js++;
+    } else if (lst[i] === "python") {
+      py++;
+    } else {
+      csharp++;
+    }
+  }
+
+  if (js > py && js > csharp) {
+    return "javascript";
+  } else if (py > js && py > csharp) {
+    return "python";
+  } else {
+    return "csharp";
+  }
+}
+
+
 $(document).ready(function() {
-  
+  $("#input").submit(function(event) {
+    event.preventDefault();
+    let resultArray = [];
+    resultArray.push($("input:radio[name=build]:checked").val());
+    resultArray.push($("input:radio[name=color]:checked").val());
+    resultArray.push($("input:radio[name=compiler]:checked").val());
+    resultArray.push($("input:radio[name=animal]:checked").val());
+    resultArray.push($("input:radio[name=zombie]:checked").val());
+    resultArray.push($("input:radio[name=naming]:checked").val());
+
+    let result = surveyResult(resultArray);
+
+
+  });
 });
