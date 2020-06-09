@@ -60,16 +60,16 @@ $(document).ready(function() {
 
     //Shows and hides results based on result variable string
     if (result === "javascript") {
-      $(".card-header").removeClass("bg-primary bg-indigo text-white bg-java").addClass("bg-javascript")
-      $(".btn").removeClass("bg-primary bg-indigo text-white bg-java").addClass("bg-javascript text-white")
+      $(".card-header").removeClass("bg-primary bg-csharp text-white bg-python bg-java").addClass("bg-javascript")
+      $(".btn").removeClass("bg-primary bg-csharp text-white bg-java").addClass("bg-javascript text-white")
       $(".py.hide").hide();
       $(".csharp.hide").hide();
       $(".java.hide").hide();
       $(".js.hide").slideDown();
     }
     else if (result === "python") {
-      $(".card-header").removeClass("bg-javascript bg-primary bg-indigo bg-java").addClass("bg-python text-white")
-      $(".btn").removeClass("bg-javascript bg-primary bg-indigo bg-java").addClass("bg-python text-white")
+      $(".card-header").removeClass("bg-javascript bg-primary bg-csharp bg-java").addClass("bg-python text-white")
+      $(".btn").removeClass("bg-javascript bg-primary bg-csharp bg-java").addClass("bg-python text-white")
       $(".js.hide").hide();
       $(".csharp.hide").hide();
       $(".java.hide").hide();
@@ -77,7 +77,7 @@ $(document).ready(function() {
     }
     else if (result === "java") {
       $(".card-header").removeClass("bg-javascript bg-primary bg-csharp bg-python text-white").addClass("bg-java text-white")
-      $(".btn").removeClass("bg-javascript bg-primary bg-python").addClass("bg-java text-white")
+      $(".btn").removeClass("bg-javascript bg-primary bg-csharp").addClass("bg-java text-white")
       $(".js.hide").hide();
       $(".py.hide").hide();
       $(".csharp.hide").hide();
